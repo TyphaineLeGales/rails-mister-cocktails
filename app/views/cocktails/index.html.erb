@@ -1,8 +1,10 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<h1>Mister Cocktail</h1>
+<p>List of all cocktail</p>
 
 <% @cocktails.each do |cocktail| %>
-  <% cocktail.doses.each do |dose|  %>
-    <p><%= cocktail.name %> <%= dose.description %> of <%= dose.ingredient.name %></p>
-  <% end %>
+        <p><%= cocktail.name %> </p>
+        <% cocktail.doses.each do |dose|  %>
+        <%= dose.description %> of <%= dose.ingredient.name %>
+        <% end %>
 <% end %>
+

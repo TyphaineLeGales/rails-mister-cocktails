@@ -23,7 +23,12 @@ orange = Ingredient.create(name: "orange Juice")
 puts "create cocktail"
 
 martini = Cocktail.create(name: "Dry Martini")
+mimosa = Cocktail.create(name: "Mimosa")
+
 
 puts "create dose"
 
 Dose.create(description: "3oz", cocktail_id: martini.id, ingredient_id: gin.id)
+Dose.create(description: "10oz", cocktail_id: mimosa.id, ingredient_id: champagne.id)
+Dose.create(description: "20oz", cocktail_id: mimosa.id, ingredient_id: orange.id)
+
