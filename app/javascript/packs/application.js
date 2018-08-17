@@ -13,3 +13,6 @@ import 'bootstrap';
 
 import {dynamicTitle} from '../components/title'
 dynamicTitle();
+
+import { colorTypeOnScroll } from  '../components/cocktail_scroll'
+colorTypeOnScroll();

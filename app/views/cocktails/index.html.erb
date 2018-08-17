@@ -1,20 +1,28 @@
-<h1>Mister Cocktail</h1>
-<span id="title"></span>
+<div class="container" >
 
 
+  <div class= "row">
+    <div style="height:60vh; margin-top:10vh;"class="col-sm-6">
+    <div  class = "header">
+      <h1 style="font-family: 'Lobster', cursive; font-size: 50px;">Mister Cocktail</h1>
+      <span style="padding-left: 5vw;" id="title"></span>
+    </div>
 
-<div class = "container">
+    </div>
+    <div class= "col-sm-6 js-loop" id="cocktails">
+  <% @cocktails.each do |cocktail| %>
+          <h2 id ="cocktail_name"><%= link_to cocktail.name, cocktail_path(cocktail.id), class: "name" %> </h2>
+          <% cocktail.doses.each do |dose|  %>
+          <!-- <div id="ingredients" class="col-sm-6">
+            <p style="font-size: 14px;"> <%= dose.description %> of <%= dose.ingredient.name %></p>
+          </div> -->
+          <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <%= link_to new_cocktail_path do %>
+     <p style="size:10px; margin:5vw;"><i class="fas fa-cocktail"></i> Add a new coktail</p>
+  <%end %>
 
 </div>
-<% @cocktails.each do |cocktail| %>
-        <h2><%= link_to cocktail.name, cocktail_path(cocktail.id) %>  </h2>
-        <% cocktail.doses.each do |dose|  %>
-        <div class="cocktail_card">
-          <p> <%= dose.description %> of <%= dose.ingredient.name %></p>
-        </div>
-        <% end %>
-
-<% end %>
-
-
-<p> <%= link_to 'add a new cocktail', new_cocktail_path %></p>

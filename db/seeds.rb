@@ -19,6 +19,7 @@ vermouth = Ingredient.create(name: "Dry vermouth")
 vodka = Ingredient.create(name: "vodka")
 champagne = Ingredient.create(name: "champagne")
 orange = Ingredient.create(name: "orange Juice")
+tequila = Ingredient.create(name: "Tequila")
 
 puts "create cocktail"
 
