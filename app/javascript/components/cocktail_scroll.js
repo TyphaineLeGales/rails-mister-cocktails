@@ -1,12 +1,17 @@
 function colorTypeOnScroll() {
-  const cocktails = document.querySelector('.name');
+  const cocktails = document.querySelectorAll('.name');
+  const container = document.getElementById('cocktails')
+  let count = 10;
   if (cocktails) {
-    window.addEventListener('scroll', () => {
-      const r = document.getElementById('cocktails').scrollY
-      console.log(r);
-     const color = "rgba(r, 12, 12, 0.5)"
-     cocktails.style = "color : '#{color}';"
-
+    container.addEventListener('scroll', () => {
+      //r.scrollY
+      let r = Math.floor((container.scrollTop));
+     cocktails.forEach((cocktail) => {
+     const color = `rgba(${r+255}, ${r +50}, ${r + 50}, 1)`
+       console.log(`"color : ${color}"`)
+      // console.log(cocktail)
+      cocktail.style.color = color;
+     });
     });
   }
 }

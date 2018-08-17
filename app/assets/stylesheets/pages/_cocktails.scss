@@ -3,7 +3,6 @@ padding: 20px 10px;
 font-size: 20px;
 text-align:center;
 a{
-  color: white;
   padding-right:15px;
 }
 }
@@ -12,10 +11,11 @@ a{
 background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 }
 #cocktails {
-background-image: url("drink-icon2.png"), linear-gradient(rgba(196,234,246,0.1), rgba(196,234,246,1), rgba(196,234,246,0.1));
+background-image: url("drink-icon2.png"), linear-gradient(rgba(255,255,246,0.1), rgba(255,255,246,1), rgba(255,255,246,0.1));
 background-size: cover;
 border-radius:20px;
 height:60vh;
 overflow:auto;
 margin-top:15vh;
+text-align:center;
 }

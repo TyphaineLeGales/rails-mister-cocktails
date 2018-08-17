@@ -25,6 +25,11 @@ puts "create cocktail"
 
 martini = Cocktail.create(name: "Dry Martini")
 mimosa = Cocktail.create(name: "Mimosa")
+bloody_mary = Cocktail.create(name: "Bloody Mary")
+Cocktail.create(name: "Tequila Sunrise")
+Cocktail.create(name: "Moscow Mule")
+Cocktail.create(name: "Sex on the beach")
+Cocktail.create(name: "Mojito")
 
 
 puts "create dose"
