@@ -7,7 +7,7 @@ function colorTypeOnScroll() {
       //r.scrollY
       let r = Math.floor((container.scrollTop));
      cocktails.forEach((cocktail) => {
-     const color = `rgba(${r+255}, ${r +50}, ${r + 50}, 1)`
+     const color = `rgba(${r+250}, ${r + 20}, ${r + 20}, 1)`
        console.log(`"color : ${color}"`)
       // console.log(cocktail)
       cocktail.style.color = color;
